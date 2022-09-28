@@ -1,0 +1,125 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2022-08-12 08:28:03",
+    "containerVersion": {
+        "path": "accounts/6003423402/containers/41842541/versions/0",
+        "accountId": "6003423402",
+        "containerId": "41842541",
+        "containerVersionId": "0",
+        "container": {
+            "path": "accounts/6003423402/containers/41842541",
+            "accountId": "6003423402",
+            "containerId": "41842541",
+            "name": "elmonoconpajarita.com",
+            "publicId": "GTM-WCJ9F4B",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1615655356817",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6003423402/containers/41842541/workspaces?apiLink=container"
+        },
+        "tag": [
+            {
+                "accountId": "6003423402",
+                "containerId": "41842541",
+                "tagId": "8",
+                "name": "HTML-VariableCompra",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  localStorage.subtotalCompra = document.querySelector({{IdentificadorCSSVariableCompra}}).\n  textContent\n    .replace(/[^\\d,.]*/g, '')\n    .replace(',', '.');\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1660292652048",
+                "firingTriggerId": [
+                    "7"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "6003423402",
+                "containerId": "41842541",
+                "triggerId": "7",
+                "name": "ActivadorVariableCompra",
+                "type": "WINDOW_LOADED",
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Page URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "pedido"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1660292700144"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "6003423402",
+                "containerId": "41842541",
+                "variableId": "6",
+                "name": "VariableCompra",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "  function() {\n    return Number(localStorage.subtotalCompra);\n  }"
+                    }
+                ],
+                "fingerprint": "1660292008149",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6003423402",
+                "containerId": "41842541",
+                "variableId": "9",
+                "name": "IdentificadorCSSVariableCompra",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": ".value"
+                    }
+                ],
+                "fingerprint": "1660292190177",
+                "formatValue": {}
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "6003423402",
+                "containerId": "41842541",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            }
+        ],
+        "fingerprint": "1660292883457",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6003423402/containers/41842541/versions/0?apiLink=version"
+    }
+}

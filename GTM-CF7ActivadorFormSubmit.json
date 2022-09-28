@@ -1,0 +1,91 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2022-09-01 10:45:44",
+    "containerVersion": {
+        "path": "accounts/6054773250/containers/92252855/versions/0",
+        "accountId": "6054773250",
+        "containerId": "92252855",
+        "containerVersionId": "0",
+        "container": {
+            "path": "accounts/6054773250/containers/92252855",
+            "accountId": "6054773250",
+            "containerId": "92252855",
+            "name": "smarthomespain.es",
+            "publicId": "GTM-589H64D",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1660809743967",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6054773250/containers/92252855/workspaces?apiLink=container"
+        },
+        "tag": [
+            {
+                "accountId": "6054773250",
+                "containerId": "92252855",
+                "tagId": "21",
+                "name": "NDC - CF7 - Event Listener",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  document.addEventListener('wpcf7mailsent', function()  {\n    window.dataLayer.push({\n      \"event\" : \"formSubmitWPCF\",\n      \"formId\" :event.detail.contactFormId,\n      \"fields\" : event.detail.inputs\n    })\n  });\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1662027964590",
+                "firingTriggerId": [
+                    "20"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "6054773250",
+                "containerId": "92252855",
+                "triggerId": "20",
+                "name": "Pagina Cargada",
+                "type": "WINDOW_LOADED",
+                "fingerprint": "1662024980097"
+            },
+            {
+                "accountId": "6054773250",
+                "containerId": "92252855",
+                "triggerId": "22",
+                "name": "NDC - CF7 - formSubmitWPCF",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "formSubmitWPCF"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1662028269312"
+            }
+        ],
+        "fingerprint": "1662029144541",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6054773250/containers/92252855/versions/0?apiLink=version"
+    }
+}

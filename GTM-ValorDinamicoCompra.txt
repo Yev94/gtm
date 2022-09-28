@@ -1,0 +1,6 @@
+V2
+Features:
+- Arreglado bug para precios iguales y mayores a 1.000€
+- Añadido control sobre varios formatos de precio (ya sea en inglés, español, chino, etc.)
+- Añadida búsqueda de varios elementos para encontrar el precio
+- Renombrado de etiquetas, activadores y variables

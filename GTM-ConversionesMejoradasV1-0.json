@@ -1,0 +1,146 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2022-08-12 09:43:28",
+    "containerVersion": {
+        "path": "accounts/6003423402/containers/41842541/versions/0",
+        "accountId": "6003423402",
+        "containerId": "41842541",
+        "containerVersionId": "0",
+        "container": {
+            "path": "accounts/6003423402/containers/41842541",
+            "accountId": "6003423402",
+            "containerId": "41842541",
+            "name": "elmonoconpajarita.com",
+            "publicId": "GTM-WCJ9F4B",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1615655356817",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6003423402/containers/41842541/workspaces?apiLink=container"
+        },
+        "tag": [
+            {
+                "accountId": "6003423402",
+                "containerId": "41842541",
+                "tagId": "17",
+                "name": "HTML-ConversionMejorada",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\ndocument.addEventListener('input', function (e) {\n  var input = e.target;\n  if ( input.name == {{IdentificadorNameEmail}} ){  \n    localStorage.google_email = input.value\n  }\n});\n  \n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1660297141686",
+                "firingTriggerId": [
+                    "16"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "6003423402",
+                "containerId": "41842541",
+                "triggerId": "16",
+                "name": "ActivadorConversionMejorada",
+                "type": "WINDOW_LOADED",
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Page URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "pedido"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1660297159309"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "6003423402",
+                "containerId": "41842541",
+                "variableId": "14",
+                "name": "LocalStorageEmailConversionMejorada",
+                "type": "j",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "localStorage.google_email"
+                    }
+                ],
+                "fingerprint": "1660296803956",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6003423402",
+                "containerId": "41842541",
+                "variableId": "15",
+                "name": "DataConversionMejorada",
+                "type": "awec",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "mode",
+                        "value": "MANUAL"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "email",
+                        "value": "{{LocalStorageEmailConversionMejorada}}"
+                    }
+                ],
+                "fingerprint": "1660296820396",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6003423402",
+                "containerId": "41842541",
+                "variableId": "18",
+                "name": "IdentificadorNameEmail",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "email"
+                    }
+                ],
+                "fingerprint": "1660297089759",
+                "formatValue": {}
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "6003423402",
+                "containerId": "41842541",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            }
+        ],
+        "fingerprint": "1660297408447",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6003423402/containers/41842541/versions/0?apiLink=version"
+    }
+}

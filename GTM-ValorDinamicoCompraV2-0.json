@@ -1,0 +1,157 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2022-08-25 15:09:54",
+    "containerVersion": {
+        "path": "accounts/6000772512/containers/30885586/versions/0",
+        "accountId": "6000772512",
+        "containerId": "30885586",
+        "containerVersionId": "0",
+        "container": {
+            "path": "accounts/6000772512/containers/30885586",
+            "accountId": "6000772512",
+            "containerId": "30885586",
+            "name": "www.hannasurmesure.es",
+            "publicId": "GTM-MF8W723",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1657258124379",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6000772512/containers/30885586/workspaces?apiLink=container"
+        },
+        "tag": [
+            {
+                "accountId": "6000772512",
+                "containerId": "30885586",
+                "tagId": "41",
+                "name": "NDC-VC-HTML-VariableCompra",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  var elementsPrices = {{NDC-VC-IdentificadoresVariableJSCompra}};\n  var localPrice = {{NDC-VC-PrecioLocalCompra}};\n  \n    function convertNumber(num, locale) {\n      var decimalSign = /^0(.)1$/.exec(new Intl.NumberFormat(locale).format(0.1))[1];\n      return +num\n        .replace(new RegExp('[^$' + decimalSign + '\\\\d]', 'g'), '')\n        .replace(decimalSign, '.');\n    };\n    \n    function searchPrice(elementsPrices) {\n      for (var iElement = 0; iElement < elementsPrices.length; iElement++) {\n        var elementFounded = document.querySelector(elementsPrices[iElement]);\n        if (elementFounded) {\n          return elementFounded.textContent.replace(/[^\\d,.]*/g, '');\n        }\n      }\n    };\n\n    var totalPrice = searchPrice(elementsPrices);\n    localStorage.subtotalCompra = convertNumber(totalPrice, {{NDC-VC-PrecioLocalCompra}});\n    console.log(convertNumber(totalPrice, localPrice));\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1661440008190",
+                "firingTriggerId": [
+                    "40"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "6000772512",
+                "containerId": "30885586",
+                "triggerId": "40",
+                "name": "NDC-VC-ActivadorVariableCompra",
+                "type": "WINDOW_LOADED",
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Page URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "pedido"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1661440026586"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "6000772512",
+                "containerId": "30885586",
+                "variableId": "39",
+                "name": "NDC-VC-IdentificadorCSSVariableCompra",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": ".value"
+                    }
+                ],
+                "fingerprint": "1661440041582",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6000772512",
+                "containerId": "30885586",
+                "variableId": "42",
+                "name": "NDC-VC-VariableCompra",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "  function() {\n    return Number(localStorage.subtotalCompra);\n  }"
+                    }
+                ],
+                "fingerprint": "1661440149120",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6000772512",
+                "containerId": "30885586",
+                "variableId": "43",
+                "name": "NDC-VC-PrecioLocalCompra",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "es-ES"
+                    }
+                ],
+                "fingerprint": "1661440058122",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6000772512",
+                "containerId": "30885586",
+                "variableId": "45",
+                "name": "NDC-VC-IdentificadoresVariableJSCompra",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n  return [{{NDC-VC-IdentificadorCSSVariableCompra}}, \"otroSelectorCSS\"];\n}\n"
+                    }
+                ],
+                "fingerprint": "1661440065588",
+                "formatValue": {}
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "6000772512",
+                "containerId": "30885586",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            }
+        ],
+        "fingerprint": "1661440193988",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6000772512/containers/30885586/versions/0?apiLink=version"
+    }
+}
